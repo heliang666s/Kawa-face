@@ -1,5 +1,3 @@
-根据您提供的项目结构，以下是后端代码的详细实现：
-
 ### **项目结构：**
 ```
 facial_expression_ai/
@@ -372,4 +370,3 @@ def save_chat_data(expression, ai_response):
 ## **8. 总结**
 本方案结合了 **FastAPI、WebSocket、OpenCV、DeepFace、DeepSeek-R1、MongoDB**，实现了实时人脸表情识别并 AI 对话的完整后端架构，支持高效、低延迟的交互体验。下一步可以扩展个性化 AI 交互，让系统更加智能化。
 
-你觉得这个方案如何？如果有特定需求，我可以进一步优化！ 🚀
