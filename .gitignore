@@ -1,3 +1,13 @@
+# 前端构建文件
+dist/
+build/
+node_modules/
+*.log
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
 # Python 虚拟环境
 venv/
 .venv/

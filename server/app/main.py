@@ -8,7 +8,6 @@ app = FastAPI()
 def read_root():
     return {"message": "FastAPI is running!"}
 
-
 # 注册 WebSocket 路由
 app.websocket("/ws")(websocket_endpoint)
 
