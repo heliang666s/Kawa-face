@@ -1,7 +1,11 @@
+import io
+import numpy as np
+from PIL import Image
 from fastapi import WebSocket
-from app.services.face_recognition import detect_expression
-from app.services.ai_response import get_ai_response
-from app.utils.mongodb import save_chat_data
+
+from server.app.services.ai_response import get_ai_response
+from server.app.services.face_recognition import detect_expression
+from server.app.utils.mongodb import save_chat_data
 
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()

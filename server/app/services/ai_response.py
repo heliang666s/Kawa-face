@@ -1,6 +1,6 @@
 # app/services/ai_response.py
 import requests
-from config import DEEPSEEK_API_URL, DEEPSEEK_API_KEY
+from server.config import DEEPSEEK_API_KEY, DEEPSEEK_API_URL
 
 def get_ai_response(expression):
     prompt = f"用户的表情是 {expression}，请提供相应的智能回复。"

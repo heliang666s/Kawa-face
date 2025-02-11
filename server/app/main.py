@@ -1,13 +1,14 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.responses import HTMLResponse
 import numpy as np
-from deepface import DeepFace
-import cv2
-import io
 from PIL import Image
-from app.services.face_recognition import detect_expression
-from app.services.ai_response import get_ai_response
-from app.utils.mongodb import save_chat_data
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+import io
+
+from starlette.websockets import WebSocket, WebSocketDisconnect
+
+from .services.face_recognition import detect_expression
+from .services.ai_response import get_ai_response
+from .utils.mongodb import save_chat_data
 
 app = FastAPI()
 
