@@ -14,8 +14,8 @@ const App: React.FC = () => {
   const [isListening, setIsListening] = useState(false);
   const [userMessage, setUserMessage] = useState("");
   const [aiResponse, setAiResponse] = useState("");
-  const recognition = useRef<SpeechRecognition | null>(null);
-  const messageTimeoutRef = useRef<NodeJS.Timeout>();
+  const recognition = useRef<typeof window.SpeechRecognition | null>(null);
+  const messageTimeoutRef = useRef<number>();
 
   const particlesInit = async (engine: Engine) => {
     await loadFull(engine);
