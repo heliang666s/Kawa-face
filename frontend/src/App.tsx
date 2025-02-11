@@ -6,6 +6,32 @@ import { Engine } from "tsparticles-engine";
 import { FaMicrophone } from "react-icons/fa";
 import VideoComponent from "./components/VideoComponent";
 import MessageDisplay from "./components/MessageDisplay";
+import { useMutation } from "@tanstack/react-query";
+
+// 发送语音文本到后端
+const sendTextMessage = async (message: string) => {
+  const response = await fetch("http://localhost:5000/api/text", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message }),
+  });
+  return response.json();
+};
+
+// 上传视频到后端
+const uploadVideo = async (videoBlob: Blob) => {
+  const formData = new FormData();
+  formData.append("video", videoBlob, "video.webm");
+
+  const response = await fetch("http://localhost:5000/api/video", {
+    method: "POST",
+    body: formData,
+  });
+
+  return response.json();
+};
 
 const App: React.FC = () => {
   const [videoStream, setVideoStream] = useState<MediaStream | null>(null);

@@ -2,14 +2,15 @@
   "name": "frontend",
   "version": "1.0.0",
   "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
+    "@types/dom-speech-recognition": "^0.0.1",
     "framer-motion": "^10.16.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
     "react-tsparticles": "^2.9.3",
     "tsparticles": "^2.9.3",
-    "tsparticles-engine": "^2.9.3",
-    "react-icons": "^4.11.0",
-    "@types/dom-speech-recognition": "^0.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "tsparticles-engine": "^2.9.3"
   },
   "devDependencies": {
     "@rsbuild/core": "^0.6.5",
